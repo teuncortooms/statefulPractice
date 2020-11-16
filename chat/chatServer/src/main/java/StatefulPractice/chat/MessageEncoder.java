@@ -1,6 +1,7 @@
 package StatefulPractice.chat;
 
 import com.google.gson.Gson;
+
 import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;

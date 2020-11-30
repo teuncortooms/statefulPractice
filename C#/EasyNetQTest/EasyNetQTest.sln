@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{B0424B01-E1E9-49E7-AAE0-A7DAB7F426C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyNetQPublisher", "Publisher\EasyNetQPublisher.csproj", "{B0424B01-E1E9-49E7-AAE0-A7DAB7F426C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "Subscriber\Subscriber.csproj", "{7CD56C53-2B51-4711-B713-B3DA14B0FCEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyNetQSubscriber", "Subscriber\EasyNetQSubscriber.csproj", "{7CD56C53-2B51-4711-B713-B3DA14B0FCEE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "Messages\Messages.csproj", "{938C25C7-B057-4BE7-8DE0-4C22AFA7A20F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitPublisher", "RabbitPublisher\RabbitPublisher.csproj", "{6E1C4129-74C4-4DB8-948C-6D81D74D415B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitPublisher", "RabbitPublisher\RabbitPublisher.csproj", "{6E1C4129-74C4-4DB8-948C-6D81D74D415B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSubscriber", "RabbitSubscriber\RabbitSubscriber.csproj", "{E31391F5-34B0-44D5-8627-D076ADE76453}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6E1C4129-74C4-4DB8-948C-6D81D74D415B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E1C4129-74C4-4DB8-948C-6D81D74D415B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E1C4129-74C4-4DB8-948C-6D81D74D415B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31391F5-34B0-44D5-8627-D076ADE76453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31391F5-34B0-44D5-8627-D076ADE76453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31391F5-34B0-44D5-8627-D076ADE76453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31391F5-34B0-44D5-8627-D076ADE76453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

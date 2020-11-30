@@ -10,35 +10,30 @@ namespace RabbitPublisher
     {
         static async Task Main(string[] args)
         {
-            const string queueName = "testqueue";
+            const string queueName = "TeunsQueue";
 
             try
             {
-                var connectionFactory = new ConnectionFactory()
-                {
-                    HostName = "localhost",
-                    UserName = "guest",
-                    Password = "guest",
-                    Port = 5672,
-                    RequestedConnectionTimeout = TimeSpan.FromMilliseconds(3000)
-                };
-
+                var connectionFactory = new ConnectionFactory(){ HostName = "localhost" };
                 using var rabbitConnection = connectionFactory.CreateConnection();
                 using var channel = rabbitConnection.CreateModel();
-                // Declaring a queue is idempotent 
-                channel.QueueDeclare(
+                
+                // Declaring a queue 
+                channel.QueueDeclare((
                     queue: queueName,
                     durable: false,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
+                // Or declare exchange?
+                //channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
 
                 while (true)
                 {
                     string body = $"A nice random message: {DateTime.Now.Ticks}";
                     channel.BasicPublish(
                         exchange: string.Empty,
-                        routingKey: queueName,
+                        routingKey: queueName, // or use exchange "logs"
                         basicProperties: null,
                         body: Encoding.UTF8.GetBytes(body));
 

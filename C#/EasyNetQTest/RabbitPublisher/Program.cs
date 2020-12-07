@@ -19,7 +19,7 @@ namespace RabbitPublisher
                 using var channel = rabbitConnection.CreateModel();
                 
                 // Declaring a queue 
-                channel.QueueDeclare((
+                channel.QueueDeclare(
                     queue: queueName,
                     durable: false,
                     exclusive: false,

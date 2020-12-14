@@ -13,7 +13,7 @@ namespace Publisher
             Console.WriteLine("Enter a message. 'Quit' to quit.");
             while ((input = Console.ReadLine()) != "Quit")
             {
-                bus.PubSub.Publish(new TextMessage
+                bus.PubSub.Publish(new OrderMessage
                 {
                     Text = input
                 });

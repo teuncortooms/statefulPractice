@@ -9,13 +9,14 @@ namespace Subscriber
         static void Main()
         {
             using var bus = RabbitHutch.CreateBus("host=localhost");
-            bus.PubSub.Subscribe<TextMessage>("test", HandleTextMessage);
+            string id = Guid.NewGuid().ToString();
+            bus.PubSub.Subscribe<OrderMessage>("test" + id, HandleTextMessage);
 
             Console.WriteLine("Listening for messages. Hit <return> to quit.");
             Console.ReadLine();
         }
 
-        static void HandleTextMessage(TextMessage textMessage)
+        static void HandleTextMessage(OrderMessage textMessage)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Got message: {0}", textMessage.Text);

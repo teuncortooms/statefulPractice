@@ -1,6 +1,6 @@
 ﻿namespace Messages
 {
-    public class TextMessage
+    public class OrderMessage
     {
         public string Text { get; set; }
     }
